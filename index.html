@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TokFlow Scheduler – Simple TikTok Content Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="TokFlow Scheduler is a simple personal tool to organize and schedule TikTok posts using the official TikTok API."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">TokFlow<span>Scheduler</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Plan and publish your TikTok content with ease.</h1>
+          <p class="lead">
+            TokFlow Scheduler is a personal tool that helps a single creator
+            plan, organize, and publish TikTok videos using the official
+            TikTok API.
+          </p>
+          <ul class="bullet-list">
+            <li>Secure OAuth login via TikTok.</li>
+            <li>Draft captions and attach videos in advance.</li>
+            <li>Schedule posts to match your content calendar.</li>
+          </ul>
+          <!-- This button is only visual for now; you can wire it later -->
+          <a class="primary-btn" href="#coming-soon">Login with TikTok (coming soon)</a>
+        </div>
+        <div class="card hero-card">
+          <h2>How it works</h2>
+          <ol>
+            <li>Sign in with your TikTok account.</li>
+            <li>Create a queue of videos and captions.</li>
+            <li>TokFlow sends them to TikTok at your chosen times.</li>
+          </ol>
+          <p class="note">
+            TokFlow is designed for personal use and does not provide mass
+            automation or multi-account posting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-light">
+      <div class="container two-col">
+        <div>
+          <h2>Built for safety and compliance</h2>
+          <p>
+            TokFlow Scheduler uses TikTok’s official APIs and respects
+            TikTok’s Platform Policies. Content is always posted only after
+            explicit user authorization.
+          </p>
+          <p>
+            We store only the minimum information required to schedule posts
+            and never sell or share your data with third parties.
+          </p>
+        </div>
+        <div>
+          <h3>Key principles</h3>
+          <ul class="bullet-list">
+            <li>Official TikTok OAuth authentication.</li>
+            <li>No scraping, no fake engagement, no bots.</li>
+            <li>Single-owner account management only.</li>
+          </ul>
+          <p class="note">
+            See our <a href="privacy.html">Privacy Policy</a> and
+            <a href="terms.html">Terms of Service</a> for full details.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="coming-soon" class="section-dark">
+      <div class="container center">
+        <h2>Developer preview</h2>
+        <p>
+          TokFlow Scheduler is currently in a private developer preview and
+          used by the owner of this website to experiment with TikTok’s
+          Content Posting API.
+        </p>
+        <p>
+          If you have any questions about the project or its use of TikTok
+          APIs, please <a href="contact.html">contact the developer</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> TokFlow Scheduler</span>
+      <span>
+        <a href="privacy.html">Privacy</a> ·
+        <a href="terms.html">Terms</a> ·
+        <a href="contact.html">Contact</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Simple dynamic year; optional
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
