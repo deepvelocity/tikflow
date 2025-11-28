@@ -1,0 +1,256 @@
+:root {
+  --bg: #050816;
+  --bg-soft: #0b1020;
+  --bg-light: #ffffff;
+  --accent: #4f46e5;
+  --accent-soft: #6366f1;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-subtle: #e2e8f0;
+  --radius-lg: 18px;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.16);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at top, #0b1120, #020617);
+  color: #e5e7eb;
+}
+
+/* Layout helpers */
+
+.container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(12px);
+  background: rgba(2, 6, 23, 0.86);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.logo span {
+  color: var(--accent-soft);
+}
+
+nav a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-left: 1.25rem;
+  opacity: 0.9;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffffff;
+}
+
+/* Hero */
+
+.hero {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+h1,
+h2,
+h3 {
+  color: #f9fafb;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  color: #e5e7eb;
+  margin-bottom: 1.25rem;
+  max-width: 34rem;
+}
+
+.bullet-list {
+  padding-left: 1.1rem;
+  margin: 0 0 1.25rem;
+  color: #e5e7eb;
+}
+
+.bullet-list li {
+  margin-bottom: 0.3rem;
+}
+
+.primary-btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* Cards / sections */
+
+.card {
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.hero-card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.hero-card ol {
+  padding-left: 1.1rem;
+  margin: 0 0 1rem;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Light section */
+
+.section-light {
+  background: #020617;
+  padding: 2.5rem 0 2.75rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.2rem;
+}
+
+.section-dark {
+  padding: 2.8rem 0;
+}
+
+/* Legal pages */
+
+.legal-page {
+  padding: 3rem 0 3.5rem;
+}
+
+.legal-page h1 {
+  margin-bottom: 0.3rem;
+}
+
+.legal-page h2 {
+  font-size: 1.1rem;
+  margin-top: 1.8rem;
+}
+
+.legal-page p,
+.legal-page li {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  background: #020617;
+  padding: 1rem 0 1.2rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.site-footer a {
+  color: #cbd5f5;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+/* Misc */
+
+.center {
+  text-align: center;
+  max-width: 40rem;
+}
+
+.center p {
+  margin-bottom: 0.6rem;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .hero-inner,
+  .two-col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  nav a {
+    margin-left: 0.8rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+}
