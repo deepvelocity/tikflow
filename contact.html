@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – TokFlow Scheduler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">TokFlow<span>Scheduler</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-light">
+      <div class="container">
+        <h1>Contact</h1>
+        <p>
+          TokFlow Scheduler is currently a personal project in active
+          development. If TikTok needs additional information about how this
+          app uses TikTok APIs, please use the contact details below.
+        </p>
+
+        <div class="card">
+          <h2>Developer contact</h2>
+          <p>
+            Email:
+            <a href="mailto:youremail@example.com">youremail@example.com</a>
+          </p>
+          <p>
+            Please include “TokFlow Scheduler” in the subject line so we can
+            respond quickly.
+          </p>
+          <p class="note">
+            Replace this email address with your own before submitting your
+            TikTok developer application.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> TokFlow Scheduler</span>
+      <span>
+        <a href="privacy.html">Privacy</a> ·
+        <a href="terms.html">Terms</a> ·
+        <a href="contact.html">Contact</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
